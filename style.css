@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'DS-DIGI';
+    src: url(fonts/DS-DIGI.TTF);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DS-DIGI';
+    font-size: 26px;
+}
+body{
+    background: black;
+    color: #cbfd00;
+
+}
+.container{
+    width: 40%;
+    margin: 40px auto;
+    border: 1px solid rgb(26, 26, 26);
+    text-align: center;
+    padding: 40px 20px;
+}
+input{
+    margin: 20px 0px 20px 10px;
+    background-color: #d3d3d3;
+    padding: 0 5px;
+    outline: none;
+}
+#numberEnter{
+    width: 130px;
+}
+.nameScore{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+label{
+    margin-left: 5px;
+}
+button{
+    background-color: #808080;
+    color: #cbfd00;
+    padding: 0px 5px;
+}
+span{
+    font-weight: 600;
+}
+.auth p{
+    margin-bottom: 30px;
+}
+#paraPrincipale{
+    margin-bottom: 80px;
+    margin-top: 30px;
+    font-size: 24px;
+}
+.bi{
+    color: #cbfd00;
+}
+
+#easyPara, #mediumPara, #difficultPara, #ParaErreur, #mediumParaErreur, #difficultParaErreur {
+    display: none;
+    line-height: 50px;
+}
+#paraPrincipale, #paraMain, #paraTrial, #paraPoint, #difficultPara, #pointsMessage, #trialsMessage{
+    margin-bottom: 20px;
+}
+                  
+.para_erreur{
+    color: #d90000;
+    margin-bottom: 10px;
+}
+
+
+.btn_lose{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.btn_lose button{
+    width: 60px;
+    display: block;
+}
+.lose button:first-child{
+    margin-right: 50px;
+}
+.ico_lose{
+    margin-bottom: 40px;
+
+}
+.ico_lose .bi{
+    font-size: 70px;
+}
+.para_success{
+    color: #007400;
+}
+.auth{
+    display: block;
+}
+.game{
+    display: none;
+}
+.lose{
+    display: none;
+}
+.success{
+    display: none;
+}
+
+
+@media screen and (max-width: 1100px) {
+    .container{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
