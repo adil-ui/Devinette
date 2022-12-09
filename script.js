@@ -36,7 +36,7 @@ function selectLevel(minNum, maxNum, points, trials) {
     paraMain.style.color = "#CCFF00";
     paraMain.innerText = `Entrez un nombre entier entre ${minNum} et ${maxNum}`;
     paraTrial.innerText = `Vous avez ${trials} Essais pour deviner`;
-    paraPoint.innerText = `Pour chaque nombre valide vous gagnez ${points} `;
+    paraPoint.innerText = `Pour chaque nombre valide vous gagnez ${points} point`;
     rundomNumber = Math.floor(Math.random() * maxNum);
     if (rundomNumber < minNum) {
         rundomNumber = rundomNumber + minNum;
@@ -72,7 +72,18 @@ btnValideNumber.addEventListener('click', (event) =>{
        score.innerText = parseInt(score.innerText + 1) 
        game.style.display = 'none'
        success.style.display = 'block'
-    } else {
+    }else if(numberEnter.value > maxNumber){
+        paraTrial.style.display = 'none'
+        paraPoint.style.display = 'none'
+        paraMain.style.color = "red";
+        paraMain.innerText = "Entrez un nombre entier entre 1 et 10";
+        myTrial = myTrial - 1;
+        pointsMessage.innerText = "";
+        trialsMessage.innerText = `Il vous reste ${myTrial} Essai`;
+    }
+     else {
+        paraTrial.style.display = 'none'
+        paraPoint.style.display = 'none'
         paraMain.style.color = "red";
         paraMain.innerText = "Désolé ce n'est pas le bon nombre!";
         myTrial = myTrial - 1;
@@ -85,5 +96,17 @@ btnValideNumber.addEventListener('click', (event) =>{
     }
 })
 
+let btnYes = document.querySelector('#btnYes')
+let btnNo = document.querySelector('#btnNo')
 
+btnYes.addEventListener('click', (event) =>{
+    event.preventDefault()
+    lose.style.display = 'none'
+    game.style.display = 'block'
+})
 
+btnNo.addEventListener('click', (event) =>{
+    event.preventDefault()
+    lose.style.display = 'none'
+    auth.style.display = 'block'
+})
