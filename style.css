@@ -49,6 +49,14 @@ span{
 .auth p{
     margin-bottom: 30px;
 }
+.auth input {
+    display: block;
+    margin: 25px auto;
+    
+}
+.auth form{
+    text-align: center;
+}
 #paraPrincipale{
     margin-bottom: 80px;
     margin-top: 30px;

@@ -19,7 +19,9 @@
         <div class="auth">
             <p>ENTREZ VOTRE NOM POUR JOUER</p>
             <form>
-                <input type="text" placeholder="VOTRE NOM" id="inputName">
+                <input type="email" placeholder="VOTRE EMAIL" id="inputEmail" class="auth_input">
+                <input type="password" placeholder="VOTRE PASSWORD" id="inputPassword" class="auth_input">
+                <p id="authError"></p>
                 <button id="btn_valide">VALIDER</button>
             </form>
         </div>
@@ -29,13 +31,13 @@
         <div class="game">
             <div class="nameScore">
                 <p><i class="bi bi-person-bounding-box"></i> <span id="gamerName">NOM</span> </p>
-                <p>SCORE : <span id="score">0</span> </p>
+                <p>SCORE : <span id="score"></span> </p>
             </div>
             <div>
                 <span> NIVEAUX:</span>
-                <input type="radio" name="level" id="easy" onchange="easyLevel()"><label for="easy">FACILE</label>
-                <input type="radio" name="level" id="medium" onchange="mediumLevel()"><label for="medium">MOYEN</label>
-                <input type="radio" name="level" id="difficult" onchange="difficultLevel()"><label for="difficult">DIFFICILE</label>
+                <input type="radio" name="level" id="easy" onchange="easyLevel()" class="levelRadio"><label for="easy" id="labelEasy">FACILE</label>
+                <input type="radio" name="level" id="medium" onchange="mediumLevel()" class="levelRadio"><label for="medium" id="labelMedium">MOYEN</label>
+                <input type="radio" name="level" id="difficult" onchange="difficultLevel()" class="levelRadio"><label for="difficult" id="labelDifficult">DIFFICILE</label>
                 <div class="message">
                     <p id="paraPrincipale">Selectionnez un niveau avant de commencer!</p>
                     <p id="paraMain"></p>
@@ -76,8 +78,8 @@
                 <p class="para_success">BRAVO Name VOUS AVEZ GAGNER 1 POINT</p> <br> Voulez vous réessayer?
             </div>
             <div class="btn_lose">
-                <button>OUI</button>
-                <button>NON</button>
+                <button id="btnSuccessYes">OUI</button>
+                <button id="btnSuccessNo">NON</button>
             </div>
         </div>
 
