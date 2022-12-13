@@ -17,7 +17,8 @@
 <!-------------------------------------------------    auth    ------------------------------------------------------------->
 
         <div class="auth">
-            <p>ENTREZ VOTRE NOM POUR JOUER</p>
+            <p>ENTREZ EMAIL: eve.holt@reqres.in</p>
+            <p>ENTREZ PASSWORD : 123</p>
             <form>
                 <input type="email" placeholder="VOTRE EMAIL" id="inputEmail" class="auth_input">
                 <input type="password" placeholder="VOTRE PASSWORD" id="inputPassword" class="auth_input">
@@ -43,7 +44,7 @@
                     <p id="paraMain"></p>
                     <p id="paraTrial"></p>
                     <p id="paraPoint"></p>
-                    <p id="difficultPara"></p>
+                    <!-- <p id="difficultPara"></p> -->
                     <p id="pointsMessage"></p>
                     <p id="trialsMessage"></p>
                 </div>
@@ -74,8 +75,9 @@
 
         <div class="success">
             <div class="ico_lose"><i class="bi bi-emoji-smile-fill"></i></div>
-            <div id="paraSuccess">
-                <p class="para_success">BRAVO Name VOUS AVEZ GAGNER 1 POINT</p> <br> Voulez vous réessayer?
+            <div>
+                <p id="paraSuccess"></p> 
+                <p>Voulez vous réessayer?</p> 
             </div>
             <div class="btn_lose">
                 <button id="btnSuccessYes">OUI</button>

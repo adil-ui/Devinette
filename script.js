@@ -24,6 +24,7 @@ let score = document.querySelector('#score')
 let email = document.querySelector('#inputEmail')
 let password = document.querySelector('#inputPassword')
 let authError = document.querySelector('#authError')
+let paraSuccess = document.querySelector('#paraSuccess')
 let rundomNumber
 let name;
 let minNumber
@@ -71,13 +72,13 @@ btnValide.addEventListener('click', (event) => {
     game.style.display = "block";
   }
 })
+*/
 
 if (localStorage.getItem("name")) {
     auth.style.display = "none";
     gamerName.innerText = localStorage.getItem("name");
     game.style.display = "block";
 }
-*/
 
 if (localStorage.getItem("myScore")) {
     score.innerText = localStorage.getItem("myScore");
@@ -142,11 +143,12 @@ btnValideNumber.addEventListener('click', (event) =>{
     event.preventDefault();
     Array.from(levelRadio).forEach(elt => elt.disabled = true)
     if (numberEnter.value == rundomNumber) {
-        let scorePoint = parseInt(score.innerText) + myPoint
-       localStorage.setItem("myScore", scorePoint);
-       score.innerText = localStorage.getItem("myScore");
-       game.style.display = 'none'
-       success.style.display = 'block'
+        let scorePoint = parseInt(score.innerText) + myPoint;
+        localStorage.setItem("myScore", scorePoint);
+        score.innerText = localStorage.getItem("myScore");
+        game.style.display = "none";
+        success.style.display = "block";
+        paraSuccess.innerText = `BRAVO VOUS AVEZ GAGNER ${myPoint} POINT`
     }else if(numberEnter.value > maxNumber || numberEnter.value < minNumber){
         paraTrial.style.display = 'none'
         paraPoint.style.display = 'none'
@@ -177,9 +179,8 @@ btnYes.addEventListener('click', (event) =>{
     event.preventDefault()
     lose.style.display = 'none'
     game.style.display = 'block'
-    Array.from(levelRadio).forEach(elt => elt.disabled = false)
+    window.location.reload()
     numberEnter.focus()
-window.location.reload()
 
 })
 
@@ -188,14 +189,12 @@ btnNo.addEventListener('click', (event) =>{
     lose.style.display = 'none'
     auth.style.display = 'block'
 })
-
 btnSuccessYes.addEventListener('click', (event) =>{
     event.preventDefault()
     success.style.display = 'none'
     game.style.display = 'block'
-    Array.from(levelRadio).forEach(elt => elt.disabled = false)
+    window.location.reload()
     numberEnter.focus()
-window.location.reload()
 
 })
 

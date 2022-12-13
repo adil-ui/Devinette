@@ -47,7 +47,7 @@ span{
     font-weight: 600;
 }
 .auth p{
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 .auth input {
     display: block;
@@ -99,8 +99,9 @@ span{
 .ico_lose .bi{
     font-size: 70px;
 }
-.para_success{
+#para_success{
     color: #007400;
+    margin-bottom: 20px;
 }
 .auth{
     display: block;
